@@ -1,0 +1,2 @@
+/**arquivo bootstrap */
+import './bootstrap';
