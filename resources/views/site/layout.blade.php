@@ -31,7 +31,12 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('site.carrinho') }}">Carrinho</a>
+                <a class="nav-link" href="{{ route('site.carrinho') }}">Carrinho
+                  <span class="badge text-bg-danger">
+                    {{ Darryldecode\Cart\Facades\CartFacade::getContent()->count() }}
+                    <span class="visually-hidden">Itens</span>
+                  </span>
+                </a>
               </li>
                             
             </ul>
