@@ -18,5 +18,7 @@ INSTALAÇÃO
 
 9- Bootstrap 5.3.3
 
+10- Bootstrap Icons 1.11.0
+
 
 # project-php-001-shopping
