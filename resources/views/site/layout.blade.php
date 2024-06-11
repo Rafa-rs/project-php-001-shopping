@@ -38,9 +38,25 @@
                   </span>
                 </a>
               </li>
-                            
+                   
             </ul>
           </div>
+           
+          <div>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Olá {{ auth()->user()->firstName }}
+                </a>
+                <ul class="dropdown-menu">
+                  
+                  <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                  
+                </ul>
+              </li>  
+            </ul>
+          </div>
+          
         </div>
     </nav>
     

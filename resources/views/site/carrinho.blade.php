@@ -31,7 +31,7 @@
         <div class="card text-bg-warning mb-3">
             <div class="card-body">
                 <h5 class="card-title">Seu carrinho está vazio!</h5>
-                <p class="card-text">Aproveite as promoções para reaizar as suas compras.</p>
+                <p class="card-text">Aproveite as promoções para realizar as suas compras.</p>
             </div>
         </div>
         
