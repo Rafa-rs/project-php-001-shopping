@@ -27,7 +27,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::define('ver-produto', function(User $user, Produto $produto){
-            return $user->id = $produto->id_user;
+            return $user->id === $produto->id_user;
         });
     }
 }
