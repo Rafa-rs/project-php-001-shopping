@@ -18,12 +18,26 @@ class LoginController extends Controller
             'password.required' =>'O campo senha é obrigatório!'
         ]);
 
-        if(Auth::attempt($credenciais)){
+        if(Auth::attempt($credenciais, $request->remember)){
             $request->session()->regenerate();
             return redirect()->intended('/admin/dashboard');
         }else{
             return redirect()->back()->with('erro', 'Email ou senha inválida!');
         }
+
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect(route('site.index'));
+    }
+
+    public function create(Request $request){
+        
+        return view('login.create');
 
     }
 }

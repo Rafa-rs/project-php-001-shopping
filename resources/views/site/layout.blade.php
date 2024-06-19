@@ -41,22 +41,35 @@
                    
             </ul>
           </div>
-           
-          <div>
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Olá {{ auth()->user()->firstName }}
-                </a>
-                <ul class="dropdown-menu">
-                  
-                  <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                  
-                </ul>
-              </li>  
-            </ul>
-          </div>
           
+          @auth
+            <div>
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ auth()->user()->firstName }} <i class="bi bi-person-lines-fill"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                    <li><a class="dropdown-item" href="{{ route('login.logout') }}">Logout</a></li>
+                  </ul>
+                </li>  
+              </ul>
+            </div>
+              @else
+              <div>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{route('login.form')}}" role="button">
+                      Login <i class="bi bi-person-lock"></i> 
+                    </a>
+                    
+                  </li>  
+                </ul>
+              </div>
+              
+          @endauth
+
         </div>
     </nav>
     
