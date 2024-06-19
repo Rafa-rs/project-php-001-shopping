@@ -16,9 +16,9 @@
                     <h5 class="card-title">{{ $produto->nome }}</h5>
                     <p class="card-text">{{ Str::limit($produto->descricao, 30) }}</p>
                     
-                    @can('verProduto', $produto)
+                    
                     <a href="{{ route('site.details', $produto->slug) }}" class="btn btn-primary">Ver</a>
-                    @endcan
+                    
                 
                 </div>
             </div>
